@@ -14,7 +14,8 @@ app.use(cors());
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.f9jp5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+    process.env.MONGOOSE_URI ||
+      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.f9jp5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
