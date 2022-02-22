@@ -3,6 +3,9 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const Contact = require("./models/Contacts");
 
+//env variables
+require("dotenv").config();
+
 const app = express();
 
 app.use(express.json());
@@ -11,7 +14,7 @@ app.use(cors());
 
 mongoose
   .connect(
-    "mongodb+srv://mongo:6JaZ25I9aFhWOgQ1@cluster0.f9jp5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.f9jp5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
