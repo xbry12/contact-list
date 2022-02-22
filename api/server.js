@@ -58,5 +58,6 @@ app.put("/contacts/complete/:id", async (req, res) => {
 
   res.json(findContact);
 });
+const port = process.env.PORT || 3001;
 
-app.listen(3001, () => console.log("server started on port 3001"));
+app.listen(port, () => console.log(`server started on port ${port}`));
