@@ -1,6 +1,6 @@
 ## Welcome to my Contact List Backend
 
-##You must run this before running the front end of the project. Running this will run the database locally. To run this project you will need to do as follows:
+## You must run this BEFORE running the front end of the project. Running this will run the database locally. To run this project you will need to do as follows:
 
 1. Clone the repo
 2. Open the console and run `npm run start`
