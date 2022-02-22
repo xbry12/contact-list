@@ -58,6 +58,10 @@ app.put("/contacts/complete/:id", async (req, res) => {
 
   res.json(findContact);
 });
+
+console.log(process.env.DB_PASS);
+console.log(process.env.DB_USER);
+
 const port = process.env.PORT || 3001;
 
 app.listen(port, () => console.log(`server started on port ${port}`));
